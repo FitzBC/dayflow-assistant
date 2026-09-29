@@ -3,10 +3,10 @@
 ## 当前状态
 
 - 阶段：P1 Web 业务原型
-- 状态：NOT STARTED
-- 最后更新：2026-09-24
+- 状态：IN PROGRESS
+- 最后更新：2026-09-29
 - 当前负责人：Codex
-- 当前工作目录：`/Users/beichenxiaoqing/workspace/日常工作/日常codex`
+- 当前工作目录：`/Users/beichenxiaoqing/workspace/a101e/git/dayflow-assistant`
 
 ## 已完成
 
@@ -21,15 +21,17 @@
 
 ## 当前进行中
 
-- 尚未开始 P1 代码实现；下一步是初始化前端工程。
+- React + TypeScript + Vite 前端工程已初始化。
+- 移动端 Dayflow 应用壳已通过单元测试和浏览器可视化检查。
+- P1 业务能力尚未实现，阶段仍为 IN PROGRESS。
 
 ## 下一步任务
 
-1. 初始化 React + TypeScript + Vite + Vitest + Playwright 前端工程。
-2. 实现 `TaskDraft`、`Task`、`CalendarEvent`、`PlanProposal` 领域模型。
-3. 用固定样例实现“自然语言输入 → 任务草案”的 mock 解析器。
-4. 用确定性算法实现第一版可用时间槽计算。
-5. 输出 P1 测试报告和浏览器截图。
+1. 实现 `TaskDraft`、`Task`、`CalendarEvent`、`PlanProposal` 领域模型。
+2. 用固定样例实现“自然语言输入 → 任务草案”的 mock 解析器。
+3. 用确定性算法实现第一版可用时间槽计算。
+4. 实现文本捕获到任务确认的第一条业务 E2E。
+5. 输出完整 P1 测试报告和浏览器截图。
 
 ## 当前明确假设
 
@@ -38,7 +40,13 @@
 - 第一阶段暂不接外部日历，使用固定的日历事件 fixture。
 - 生产模型、语音服务和日历 Provider 都通过接口隔离，避免早期被供应商绑定。
 
+## 最近验证
+
+- 初始化报告：`reports/P1-init-2026-09-29.md`
+- RED checkpoint：`a58eaa5`
+- GREEN checkpoint：`9a206cd`
+
 ## 阻塞与风险
 
-- 当前目录尚未初始化 Git；在产生第一版代码前建议初始化仓库并建立阶段 checkpoint。
+- 系统未提供全局 Node/npm；本次使用 Codex 工作区 Node 和临时 npm CLI 完成验证。普通开发环境按 README 使用标准 npm 即可。
 - Android 真机提醒的可靠性必须在 Capacitor 工程建立后单独验证，不能用浏览器测试替代。

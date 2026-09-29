@@ -8,7 +8,7 @@
 
 1. 阅读本文件。
 2. 阅读 `docs/ai-secretary/00-status.md`，确认当前阶段和未完成任务。
-3. 阅读 `docs/ai-secretary/02-acceptance-matrix.md` 中与当前任务相关的验收条目。
+3. 阅读 `docs/ai-secretary/03-acceptance-matrix.md` 中与当前任务相关的验收条目。
 4. 检查当前工作目录的未提交或未说明修改；不得覆盖他人已有变更。
 5. 先写或更新测试，再实现功能。没有可执行测试或验收证据，不得声称完成。
 

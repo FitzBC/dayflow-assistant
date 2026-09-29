@@ -1,32 +1,40 @@
-# React + TypeScript + Vite
+# Dayflow Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Dayflow 是一个面向 Android 的轻量个人日常事务秘书。用户通过中文语音或文字描述需求，系统将其转成结构化任务、生成可解释的日程建议，并通过原生通知形成完成或延期闭环。
 
-Currently, two official plugins are available:
+当前处于 **P1 Web 业务原型**阶段。仓库已经具备可运行的移动端 Web 壳、测试基线和跨 Agent 接续文档；任务解析、排程和 Android 原生能力尚未实现。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 技术基线
 
-## React Compiler
+- React 19 + TypeScript + Vite
+- Vitest + Testing Library
+- Playwright（后续 E2E）
+- 目标容器：Capacitor Android
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 本地运行
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 验证命令
+
+```bash
+npm run build
+npm run typecheck
+npm run lint
+npm test
+npm run test:coverage
+```
+
+## Agent 接续
+
+开始工作前依次阅读：
+
+1. `AGENTS.md`
+2. `docs/ai-secretary/00-status.md`
+3. `docs/ai-secretary/03-acceptance-matrix.md`
+4. `reports/` 中最新报告
+
+项目范围、阶段计划和完成定义位于 `docs/ai-secretary/`。
